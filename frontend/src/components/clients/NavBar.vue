@@ -4,7 +4,7 @@
       <!-- Logo -->
       <div class="logo">
         <router-link to="/">
-          <img src="D:\work\do_an_tot_nghiep\frontend\src\assets\logo.jpg" alt="Logo">
+          <img src="/logo.jpg" alt="Logo">
         </router-link>
       </div>
 
