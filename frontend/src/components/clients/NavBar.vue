@@ -40,7 +40,6 @@
       </div>
     </div>
   </nav>
-  <h1>fdsfds</h1>
 </template>
 <style scoped>
 /* Navbar Container */

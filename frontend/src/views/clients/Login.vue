@@ -27,6 +27,7 @@ export default {
         handleSubmit() {
             console.log('Username:', this.username);
             console.log('Password:', this.password);
+            this.$router.push({ name: 'Dashboard' });
         }
     }
 };

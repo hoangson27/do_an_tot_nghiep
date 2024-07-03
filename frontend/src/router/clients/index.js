@@ -6,12 +6,18 @@ import Login from '@/views/clients/Login.vue'
 import Register from '@/views/clients/Register.vue'
 import Home from '@/views/clients/Home.vue'
 import InfoPage from '@/components/clients/InfoPage.vue'
+import Dashboard from '@/views/clients/Dashboard.vue'
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home, 
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard, 
   },
   {
     path: "/short-link",
