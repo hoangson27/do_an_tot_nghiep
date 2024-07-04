@@ -1,4 +1,5 @@
 <template>
+    <HeaderProfile/>
     <div class="main-container">
         <div class="form-container">
             <h2>Enter Your Information</h2>
@@ -55,15 +56,22 @@
                 </tbody>
             </table>
         </div>
+
+        <div v-if="encryptedLink">
+            <PhoneIframe  :src="iframeSrc" />
+        </div>
     </div>
 </template>
 
 <script>
-import SaveButton from '../../components/clients/saveData.vue';
-
+import SaveButton from '../../clients/saveData.vue';
+import PhoneIframe from '../../clients/PhoneIframe.vue';
+import HeaderProfile from './Header.vue'
 export default {
     components: {
-        SaveButton
+        SaveButton,
+        PhoneIframe,
+        HeaderProfile
     },
     data() {
         return {
@@ -75,7 +83,8 @@ export default {
             additionalInputs: [],
             savedData: null,
             hasChanges: false,
-            avatarUrl: null // URL của ảnh đại diện
+            avatarUrl: null, // URL của ảnh đại diện
+            encryptedLink: null // Lưu trữ liên kết mã hóa
         };
     },
     computed: {
@@ -85,6 +94,9 @@ export default {
                 additional: this.additionalInputs.map(input => input.value),
                 avatar: this.avatarUrl
             };
+        },
+        iframeSrc() {
+            return this.encryptedLink ? `/info/${this.encryptedLink}` : '';
         }
     },
     watch: {
@@ -118,10 +130,7 @@ export default {
             };
 
             // Mã hóa dữ liệu và tạo liên kết mã hóa
-            const encryptedLink = btoa(JSON.stringify(combinedData));
-
-            // Chuyển hướng tới InfoPage với liên kết mã hóa
-            this.$router.push({ name: 'InfoPage', params: { encryptedLink } });
+            this.encryptedLink = btoa(JSON.stringify(combinedData));
         },
         handleSave(data) {
             // Lưu dữ liệu khi sự kiện save được kích hoạt từ SaveButton

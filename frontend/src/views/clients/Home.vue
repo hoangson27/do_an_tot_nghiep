@@ -8,17 +8,17 @@
         <section id="bio-link" class="section">
           <h2>Tạo Bio Link</h2>
           <p>Tạo liên kết Bio dễ dàng để chia sẻ thông tin cá nhân của bạn với người khác.</p>
-          <router-link to="/bio-link" class="btn">Tìm hiểu thêm</router-link>
+          <router-link to="/short-link" class="btn">Tìm hiểu thêm</router-link>
         </section>
         <section id="qr-code" class="section">
           <h2>Tạo mã QR</h2>
           <p>Tạo mã QR để chia sẻ thông tin nhanh chóng và thuận tiện.</p>
-          <router-link to="/qr-code" class="btn">Tìm hiểu thêm</router-link>
+          <router-link to="/create-qr" class="btn">Tìm hiểu thêm</router-link>
         </section>
         <section id="nfc-tag" class="section">
           <h2>Tạo thẻ NFC</h2>
           <p>Tạo thẻ NFC để truyền dữ liệu không dây giữa các thiết bị tương thích.</p>
-          <router-link to="/nfc-tag" class="btn">Tìm hiểu thêm</router-link>
+          <router-link to="/nfc" class="btn">Tìm hiểu thêm</router-link>
         </section>
       </main>
       <footer>
@@ -97,7 +97,7 @@
     margin-top: 10px;
     padding: 10px 20px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: #0cd91e;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;

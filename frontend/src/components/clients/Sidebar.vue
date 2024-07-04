@@ -5,6 +5,7 @@
         <li @click="navigate('ShortLink')">Create Bio Link</li>
         <li @click="navigate('QRCode')">Create QR Code</li>
         <li @click="navigate('NFC')">Create NFC Tag</li>
+        <li @click="navigate('Analytics')">Analytics</li>
       </ul>
     </div>
   </template>

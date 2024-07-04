@@ -9,10 +9,10 @@
 
 <script>
 import Sidebar from '@/components/clients/Sidebar.vue'
-import QRCode from '@/components/clients/CreateQR.vue'
+import QRCode from '@/components/clients/CreateQR/CreateQR.vue'
 import NFC from '@/components/clients/NFC.vue'
-import ShortLink from '@/components/clients/ShortLink.vue'
-import Analytics from '@/components/clients/Analytics.vue'
+import ShortLink from '@/components/clients/LinkBio/ShortLink.vue'
+//import Analytics from '@/components/clients/Analytics.vue'
 
 export default {
     name: 'Dashboard',
@@ -21,11 +21,10 @@ export default {
         ShortLink,
         QRCode,
         NFC,
-        Analytics
     },
     data() {
         return {
-            currentComponent: 'Analytics'
+            currentComponent: 'ShortLink'
         };
     }
 };
